@@ -64,12 +64,12 @@ static const Key keys[] = {
     { MODKEY,                       XK_d,      spawn,          SHCMD("dmenu_run") },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_b,      togglebar,      {0} },
-    { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-    { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+    { MODKEY,                       XK_h,      focusstack,     {.i = +1 } },
+    { MODKEY,                       XK_l,      focusstack,     {.i = -1 } },
     { MODKEY,                       XK_comma,  incnmaster,     {.i = +1 } },
     { MODKEY,                       XK_period, incnmaster,     {.i = -1 } },
-    { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-    { MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+    { MODKEY|ShiftMask,             XK_h,      setmfact,       {.f = -0.05} },
+    { MODKEY|ShiftMask,             XK_l,      setmfact,       {.f = +0.05} },
     { MODKEY|ShiftMask,             XK_j,      zoom,           {0} },
     { MODKEY,                       XK_Tab,    view,           {0} },
     { MODKEY,                       XK_q,      killclient,     {0} },
@@ -114,4 +114,4 @@ static const Button buttons[] = {
 };
 
 
-// Last Modified: Thu, 30 Jan 2025 03:08:09 PM
+// Last Modified: Thu, 30 Jan 2025 03:18:32 PM
