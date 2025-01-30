@@ -1,28 +1,19 @@
 diff --git i/config.def.h w/config.def.h
-index 444979c..9e0ff30 100644
+index 9e0ff30..3c0db6b 100644
 --- i/config.def.h
 +++ w/config.def.h
-@@ -5,7 +5,7 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
- static const unsigned int snap      = 32;       /* snap pixel */
- static const int showbar            = 1;        /* 0 means no bar */
- static const int topbar             = 1;        /* 0 means bottom bar */
--static const char *fonts[]          = { "monospace:size=10" };
-+static const char *fonts[]          = { "monospace:size=14" };
- /*static const char dmenufont[]       = "monospace:size=10";*/
- static const char col_gray1[]       = "#222222";
- static const char col_gray2[]       = "#444444";
-@@ -45,7 +45,7 @@ static const Layout layouts[] = {
- };
+@@ -57,8 +57,6 @@ static const Layout layouts[] = {
+ #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
  
- /* key definitions */
--#define MODKEY Mod1Mask
-+#define MODKEY Mod4Mask
- #define ALTKEY Mod1Mask
- #define TAGKEYS(KEY,TAG) \
-     { MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
-@@ -116,4 +116,4 @@ static const Button buttons[] = {
+ /* commands */
+-/*static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+-/*static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };*/
+ static const char *termcmd[]  = { TERMINAL, NULL };
+ 
+ static const Key keys[] = {
+@@ -116,4 +114,4 @@ static const Button buttons[] = {
  };
  
  
--// Last Modified: Thu, 30 Jan 2025 02:36:05 PM
-+// Last Modified: Thu, 30 Jan 2025 02:41:20 PM
+-// Last Modified: Thu, 30 Jan 2025 02:41:20 PM
++// Last Modified: Thu, 30 Jan 2025 02:43:05 PM
