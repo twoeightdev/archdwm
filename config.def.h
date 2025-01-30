@@ -19,7 +19,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5" };
 
 static const Rule rules[] = {
     /* xprop(1):
@@ -63,7 +63,7 @@ static const Key keys[] = {
     /* modifier                     key        function        argument */
     { MODKEY,                       XK_d,      spawn,          SHCMD("dmenu_run") },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-    { MODKEY,                       XK_b,      togglebar,      {0} },
+    { ALTKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY,                       XK_h,      focusstack,     {.i = +1 } },
     { MODKEY,                       XK_l,      focusstack,     {.i = -1 } },
     { MODKEY,                       XK_comma,  incnmaster,     {.i = +1 } },
@@ -89,11 +89,9 @@ static const Key keys[] = {
     TAGKEYS(                        XK_3,                      2)
     TAGKEYS(                        XK_4,                      3)
     TAGKEYS(                        XK_5,                      4)
-    TAGKEYS(                        XK_6,                      5)
-    TAGKEYS(                        XK_7,                      6)
-    TAGKEYS(                        XK_8,                      7)
-    TAGKEYS(                        XK_9,                      8)
     { MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+    { MODKEY,                       XK_Escape, spawn,          SHCMD("power") },
+    { MODKEY,                       XK_b,      spawn,          SHCMD("$BROWSER") },
 };
 
 /* button definitions */
@@ -114,4 +112,4 @@ static const Button buttons[] = {
 };
 
 
-// Last Modified: Thu, 30 Jan 2025 03:18:32 PM
+// Last Modified: Thu, 30 Jan 2025 04:10:08 PM
