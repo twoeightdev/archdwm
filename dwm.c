@@ -1648,8 +1648,6 @@ spawn(const Arg *arg)
 {
     struct sigaction sa;
 
-    if (arg->v == dmenucmd)
-        dmenumon[0] = '0' + selmon->num;
     if (fork() == 0) {
         if (dpy)
             close(ConnectionNumber(dpy));
@@ -2163,4 +2161,4 @@ main(int argc, char *argv[])
     return EXIT_SUCCESS;
 }
 
-// Last Modified: Thu, 30 Jan 2025 02:09:47 PM
+// Last Modified: Thu, 30 Jan 2025 02:37:55 PM
