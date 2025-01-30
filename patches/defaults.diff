@@ -1,19 +1,19 @@
 diff --git i/config.def.h w/config.def.h
-index 9e0ff30..3c0db6b 100644
+index 3c0db6b..cda155f 100644
 --- i/config.def.h
 +++ w/config.def.h
-@@ -57,8 +57,6 @@ static const Layout layouts[] = {
- #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
- 
- /* commands */
--/*static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
--/*static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };*/
- static const char *termcmd[]  = { TERMINAL, NULL };
+@@ -61,7 +61,7 @@ static const char *termcmd[]  = { TERMINAL, NULL };
  
  static const Key keys[] = {
-@@ -116,4 +114,4 @@ static const Button buttons[] = {
+     /* modifier                     key        function        argument */
+-    { MODKEY,                       XK_d,      spawn,          {.v = "dmenu_run" } },
++    { MODKEY,                       XK_d,      spawn,          SHCMD("dmenu_run") },
+     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+     { MODKEY,                       XK_b,      togglebar,      {0} },
+     { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
+@@ -114,4 +114,4 @@ static const Button buttons[] = {
  };
  
  
--// Last Modified: Thu, 30 Jan 2025 02:41:20 PM
-+// Last Modified: Thu, 30 Jan 2025 02:43:05 PM
+-// Last Modified: Thu, 30 Jan 2025 02:43:05 PM
++// Last Modified: Thu, 30 Jan 2025 03:08:09 PM

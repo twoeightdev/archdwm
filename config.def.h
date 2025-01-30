@@ -61,7 +61,7 @@ static const char *termcmd[]  = { TERMINAL, NULL };
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
-    { MODKEY,                       XK_d,      spawn,          {.v = "dmenu_run" } },
+    { MODKEY,                       XK_d,      spawn,          SHCMD("dmenu_run") },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -114,4 +114,4 @@ static const Button buttons[] = {
 };
 
 
-// Last Modified: Thu, 30 Jan 2025 02:43:05 PM
+// Last Modified: Thu, 30 Jan 2025 03:08:09 PM
